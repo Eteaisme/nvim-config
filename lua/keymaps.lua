@@ -30,4 +30,8 @@ Map('n', '<Leader>q', ':wq<CR>')
 Map('n', 'U', '<C-r>', {})
 
 -- NEWLINE --
-Map('n', '<S-CR>', 'mzo<Esc>`z')
+Map('n', '<S-CR>', 'mzo<Esc>')
+
+-- TERMINAL -- 
+Map('n', '<Leader><CR>', ':term<CR>i')
+
