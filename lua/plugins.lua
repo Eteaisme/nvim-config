@@ -96,7 +96,16 @@ require("lazy").setup({
         "vim-telescope/telescope.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
-            require("telescope").setup()
+            local actions = require("telescope.actions")
+            require("telescope").setup({
+                defaults = {
+                    mappings = {
+                        i = {
+                            ["<esc>"] = actions.close,
+                        },
+                    },
+                },
+            })
         end, 
 
     },
