@@ -27,4 +27,3 @@ vim.opt.guifont = "h:14"
 
 vim.opt.swapfile = false
 
-vim.g.mapleader = " "
