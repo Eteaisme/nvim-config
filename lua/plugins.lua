@@ -92,4 +92,13 @@ require("lazy").setup({
             require("hardtime").setup()
         end,
     },
+    {
+        "vim-telescope/telescope.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require("telescope").setup()
+        end, 
+
+    },
+
 })
