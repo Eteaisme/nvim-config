@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
-        "catppuccin/nvim", 
+        "catppuccin/nvim",
         config = function()
             vim.cmd.colorscheme("catppuccin-macchiato")
         end,
@@ -82,7 +82,13 @@ require("lazy").setup({
         "mason-org/mason-lspconfig.nvim",
         dependencies = { "mason.nvim" },
         config = function()
-            require("mason-lspconfig").setup()
+            require("mason-lspconfig").setup({
+                vim.lsp.config("lua_ls", {
+                    settings = {
+                        Lua = {
+                            diagnostics = {
+                                globals = { "vim" }}}}})
+            })
         end,
     },
     {
@@ -106,7 +112,7 @@ require("lazy").setup({
                     },
                 },
             })
-        end, 
+        end,
 
     },
     {
@@ -116,5 +122,13 @@ require("lazy").setup({
             require('lualine').setup()
         end,
     },
+    {
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },
+    config = function()
+        require('render-markdown').setup({})
+   end,
+    },
+
 
 })
