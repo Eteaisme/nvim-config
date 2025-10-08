@@ -129,6 +129,12 @@ require("lazy").setup({
         require('render-markdown').setup({})
    end,
     },
-
+    {
+        'stevearc/oil.nvim',
+        dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+        config = function()
+            require("oil").setup()
+        end,
+},
 
 })

@@ -19,7 +19,7 @@ Map('n', '<leader>fw', builtin.live_grep, {})
 
 
 
-Map('n', '<leader>e', builtin.buffers, {})
+Map('n', '<leader>e', ':e . <cr>')
 
 -- WRITING & QUITING --
 Map('n', '<Leader>w', ':write<CR>')
