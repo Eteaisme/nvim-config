@@ -1,4 +1,3 @@
-local builtin = require('telescope.builtin')
 
 function Map(mode, lhs, rhs, opts)
     local options = { noremap = true, silent = true }
@@ -13,12 +12,7 @@ end
 -- LEADER -- 
 vim.g.mapleader = " "
 
--- TELESCOPE -- 
-Map('n', '<leader>ff', builtin.find_files, {})
-Map('n', '<leader>fw', builtin.live_grep, {})
-
-
-
+-- OIL --
 Map('n', '<leader>e', ':Oil . <cr>')
 
 -- WRITING & QUITING --
