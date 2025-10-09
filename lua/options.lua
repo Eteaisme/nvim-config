@@ -32,3 +32,4 @@ vim.diagnostic.config({
     enable = true,
   },
 })
+
