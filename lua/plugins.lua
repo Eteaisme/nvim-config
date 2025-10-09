@@ -98,13 +98,7 @@ require("lazy").setup({
         cmd = "Telescope",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
-            local actions = require("telescope.actions")
             require("telescope").setup({
-                defaults = {
-                    mappings = {
-                        i = { ["<esc>"] = actions.close },
-                    },
-                },
             })
         end,
     },
@@ -133,6 +127,12 @@ require("lazy").setup({
         dependencies = { { "nvim-mini/mini.icons", opts = {} } },
         config = function()
             require("oil").setup()
+        end,
+    },
+    {
+        "akinsho/bufferline.nvim",
+        config = function()
+            require("bufferline").setup{}
         end,
     },
 })

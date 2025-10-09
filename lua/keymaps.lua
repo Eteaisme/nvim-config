@@ -25,6 +25,8 @@ Map('n', '<leader>e', ':Oil . <cr>')
 Map('n', '<Leader>w', ':write<CR>')
 Map('n', '<Leader>a', ':wqa<CR>')
 Map('n', '<Leader>q', ':wq<CR>')
+Map('n', '<Leader>o', ':so<CR>')
+
 
 -- REDO --
 Map('n', 'U', '<C-r>', {})
@@ -35,3 +37,6 @@ Map('n', '<S-CR>', 'mzo<Esc>')
 -- TERMINAL -- 
 Map('n', '<Leader><CR>', ':term<CR>i')
 
+-- BUFFERS -- 
+Map('n',  '<Tab>', ':bnext<CR>')
+Map('n',  '<S-Tab>',':bprev<CR>')
