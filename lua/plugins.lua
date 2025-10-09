@@ -1,5 +1,4 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim" if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
   local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
   if vim.v.shell_error ~= 0 then
@@ -63,33 +62,18 @@ require("lazy").setup({
             require("mason").setup()
         end,
     },
-
     {
-        "williamboman/mason-lspconfig.nvim",
+        "mason-org/mason-lspconfig.nvim",
         dependencies = { "mason.nvim" },
-        event = "BufReadPre",
         config = function()
+            require("mason-lspconfig").setup()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls" },
-                handlers = {
-                    function(server)
-                        require("lspconfig")[server].setup({
-                            settings = {
-                                Lua = { diagnostics = { globals = { "vim" } } },
-                            },
-                        })
-                    end,
-                },
+                vim.lsp.config("lua_ls", {
+                    settings = {
+                        Lua = {
+                            diagnostics = {
+                                globals = { "vim" }}}}})
             })
-        end,
-    },
-
-    {
-        "m4xshen/hardtime.nvim",
-        event = "VeryLazy",
-        dependencies = { "MunifTanjim/nui.nvim" },
-        config = function()
-            require("hardtime").setup()
         end,
     },
 
@@ -133,6 +117,12 @@ require("lazy").setup({
         "akinsho/bufferline.nvim",
         config = function()
             require("bufferline").setup{}
+        end,
+    },
+    {
+        "windwp/nvim-autopairs",
+        config = function()
+            require("nvim-autopairs").setup{}
         end,
     },
 })
