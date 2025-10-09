@@ -1,7 +1,6 @@
-
-
-
-
+-- KEYMAPS & OPTIONS --
+require("core.options")
+require("core.keymaps")
 
 -- LAZY -- 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
