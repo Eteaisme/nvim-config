@@ -26,7 +26,7 @@ require("lazy").setup({
 
     {
         "nvim-treesitter/nvim-treesitter",
-        event = { "BufReadPost", "BufNewFile" },
+        event = { "VeryLazy", "BufReadPost", "BufNewFile" },
         build = ":TSUpdate",
         config = function()
             require("nvim-treesitter.configs").setup({
@@ -69,7 +69,7 @@ require("lazy").setup({
 
     {
         "neovim/nvim-lspconfig",
-        event = { "BufReadPre", "BufNewFile" },
+        event = { "VeryLazy", "BufReadPre", "BufNewFile" },
     },
 
     {
