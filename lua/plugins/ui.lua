@@ -15,11 +15,14 @@ return {
 		end,
 	},
 	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
+		"willothy/nvim-cokeline",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"stevearc/resession.nvim",
+		},
 		config = function()
-			require("bufferline").setup()
+			require("cokeline").setup()
 		end,
 	},
 }
