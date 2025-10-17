@@ -73,5 +73,8 @@ return {
 			})
 		end,
 	},
-	{},
+	{
+		"Eteaisme/nvim-cupid",
+		branch = "dev",
+	},
 }
