@@ -69,6 +69,28 @@ return {
 			require("telescope").setup({
 				defaults = {
 					prompt_prefix = "🔍 ",
+					file_ignore_patterns = {
+						"%.exe$",
+						"%.o$",
+						"%.a$",
+						"%.out$",
+						"%.so$",
+						"%.png$",
+						"%.jpg$",
+						"%.jpeg$",
+						"%.gif$",
+						"%.bmp$",
+						"%.pdf$",
+						"%.zip$",
+						"%.tar$",
+						"%.gz$",
+						"%.7z$",
+						"%.mp4$",
+						"%.mp3$",
+						"%.avi$",
+						"%.mkv$",
+						"%.mov$",
+					},
 				},
 			})
 		end,
