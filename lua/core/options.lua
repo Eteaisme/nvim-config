@@ -28,8 +28,9 @@ vim.opt.guifont = "h:14"
 vim.opt.swapfile = false
 
 vim.diagnostic.config({
-  virtual_text = {
-    enable = true,
-  },
+	virtual_text = {
+		enable = true,
+	},
 })
 
+vim.opt.guicursor = "n-v-c-sm-i:block,ci-ve:ver25,r-cr-o:hor20"
