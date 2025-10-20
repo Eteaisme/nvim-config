@@ -21,10 +21,3 @@ few features I was used to, hence this configuration.
 ---
 
 ## 🐛 Issues
-~- **Bufferline** -->    Bufferline background somtimes turns black~
-Test
-    -->|test
-        -->|test
-                -->|test
-                                -->|Test
-                                                                -->|
