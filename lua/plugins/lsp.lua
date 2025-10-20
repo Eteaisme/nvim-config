@@ -361,7 +361,7 @@ return {
 			keymap = {
 				["<Up>"] = { "select_prev", "fallback" },
 				["<Down>"] = { "select_next", "fallback" },
-				["<Tab>"] = { "accept", "fallback" },
+				["<Enter>"] = { "accept", "fallback" },
 				-- 'default' (recommended) for mappings similar to built-in completions
 				--   <c-y> to accept ([y]es) the completion.
 				--    This will auto-import if your LSP supports it.
