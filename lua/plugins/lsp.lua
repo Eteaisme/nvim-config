@@ -359,8 +359,8 @@ return {
 		--- @type blink.cmp.Config
 		opts = {
 			keymap = {
-				["<Up>"] = { "select_prev", "fallback" },
-				["<Down>"] = { "select_next", "fallback" },
+				["<S-Tab>"] = { "select_prev", "fallback" },
+				["<Tab>"] = { "select_next", "fallback" },
 				["<Enter>"] = { "accept", "fallback" },
 				-- 'default' (recommended) for mappings similar to built-in completions
 				--   <c-y> to accept ([y]es) the completion.
