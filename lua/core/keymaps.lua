@@ -36,3 +36,12 @@ Map("n", "<S-Tab>", ":bprev<CR>")
 
 -- SEARCH --
 Map("n", "<Esc>", "<cmd>nohlsearch<CR><Esc>")
+Map("n", "i", "<cmd>nohlsearch<CR>i")
+Map("n", "a", "<cmd>nohlsearch<CR>a")
+Map("n", "o", "<cmd>nohlsearch<CR>o")
+Map("n", "O", "<cmd>nohlsearch<CR>O")
+Map("n", "I", "<cmd>nohlsearch<CR>I")
+Map("n", "A", "<cmd>nohlsearch<CR>A")
+Map("n", "v", "<cmd>nohlsearch<CR>v")
+Map("n", "V", "<cmd>nohlsearch<CR>V")
+Map("n", "<C-v>", "<cmd>nohlsearch<CR><C-v>")
