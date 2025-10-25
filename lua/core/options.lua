@@ -23,7 +23,7 @@ vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
 
-vim.opt.guifont = "h:14"
+vim.opt.guifont = "h:25"
 
 vim.opt.swapfile = false
 
